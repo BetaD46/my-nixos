@@ -1,0 +1,1 @@
+sudo rsync -v ./* /etc/nixos/

@@ -15,10 +15,22 @@
       # 将 inputs 设置为内联，可在 modules 中引入 inputs
       specialArgs = { inherit inputs; };
 
-      modules = [ 
+      modules = [
         ./configuration.nix
         ./my.nix
       ];
     };
+
+    nixosConfigurations.nixos-niri = nixpkgs.lib.nixosSystem {
+      # 将 inputs 设置为内联，可在 modules 中引入 inputs
+      specialArgs = { inherit inputs; };
+
+      modules = [
+        ./configuration.nix
+        ./my.nix
+        ./nnn/desktop.nix
+      ];
+    };
+
   };
 }

@@ -8,6 +8,8 @@
     experimental-features = [ "nix-command" "flakes" ];
   };
 
+  boot.loader.systemd-boot.configurationLimit = 3;
+
   programs.yazi.enable = true;
   environment.systemPackages = with pkgs; [
     git

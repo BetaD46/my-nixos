@@ -5,8 +5,14 @@
   programs.yazi.enable = true;
   environment.systemPackages = with pkgs; [
     git
-    # rustc
-    # cargo
-    # nushell
+    rustc
+    cargo
+    nushell
+    msedit
   ];
+  programs.bash.interactiveShellInit = ''
+    if ! [ "$TERM" = "dumb" ] && [ -z "$BASH_EXECUTION_STRING" ]; then
+      exec nu
+    fi
+  '';
 }

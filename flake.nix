@@ -31,12 +31,11 @@
       ];
     };
 
-    nixosConfigurations.hhh-boxes = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.hhh-vb = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
 
       modules = [
-        ./host/hhh-boxes/config.nix
-        ./host/hhh-boxes/bootloader.nix
+        ./host/hhh-vb/config.nix
       ];
     };
 

@@ -1,4 +1,4 @@
-{...}:
+{ ... }:
 
 {
   home.stateVersion = "25.11";
@@ -9,7 +9,7 @@
       settings = {
         window = {
           decorations = "None";
-          padding.x= 16;
+          padding.x = 16;
           opacity = 0.96;
         };
       };

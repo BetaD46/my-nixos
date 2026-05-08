@@ -1,10 +1,16 @@
-{ config, pkgs, lib, inputs, ... }:
+{
+  pkgs,
+  inputs,
+  ...
+}:
 
 {
   environment.systemPackages = with pkgs; [
     # noctalia-shell
-    pkgs.noctalia-shell
-    pkgs.zed-editor
+    noctalia-shell
+    zed-editor
+    nil
+    nixd
   ];
 
   # fonts
@@ -19,7 +25,7 @@
 
     fontconfig = {
       defaultFonts = {
-        serif = [  "Noto Serif CJK SC" ];
+        serif = [ "Noto Serif CJK SC" ];
         sansSerif = [ "Noto Sans CJK SC" ];
         monospace = [ "Maple Mono NF CN" ];
       };
@@ -31,16 +37,16 @@
 
   programs.regreet = {
     enable = true;
-      settings = {
-        GTK.application_prefer_dark_theme = true;
-      };
-      # For this example you'd need to have a version of Adwaita and the font Cantarell installed
-      theme.name = "Adwaita";
-      font = {
-        name = "Cantarell";
-        size = 16;
-      };
-      cursorTheme.name = "Adwaita";
+    settings = {
+      GTK.application_prefer_dark_theme = true;
+    };
+    # For this example you'd need to have a version of Adwaita and the font Cantarell installed
+    theme.name = "Adwaita";
+    font = {
+      name = "Cantarell";
+      size = 16;
+    };
+    cursorTheme.name = "Adwaita";
   };
 
   home-manager = {

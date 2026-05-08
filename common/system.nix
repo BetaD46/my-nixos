@@ -1,4 +1,7 @@
-{ config, pkgs, lib, ... }:
+{
+  pkgs,
+  ...
+}:
 
 {
   networking.hostName = "nixos";
@@ -30,8 +33,11 @@
   users.users.wjf = {
     isNormalUser = true;
     description = "wjf";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
+    packages = with pkgs; [ ];
   };
 
   nixpkgs.config.allowUnfree = true;

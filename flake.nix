@@ -17,7 +17,6 @@
 
       modules = [
         ./host/nixos/mod.nix
-        ./common/bootloader.nix
       ];
     };
 
@@ -26,7 +25,6 @@
 
       modules = [
         ./host/nixos/mod.nix
-        ./common/bootloader.nix
         ./nnn/desktop/nix
       ];
     };
@@ -36,6 +34,14 @@
 
       modules = [
         ./host/hhh-vb/config.nix
+      ];
+    };
+
+    nixosConfigurations.my = nixpkgs.lib.nixosSystem {
+      specialArgs = { inherit inputs; };
+
+      modules = [
+        ./host/my/config.nix
       ];
     };
 

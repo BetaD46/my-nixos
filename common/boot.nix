@@ -10,13 +10,13 @@
     # boot.loader.systemd-boot.configurationLimit = 3;
     # boot.loader.efi.canTouchEfiVariables = true;
 
-    boot.kernelPatches = [
-        {
-            name = "Rust Support";
-            patch = null;
-            features = {
-                rust = true;
-            };
-        }
-    ];
+    # boot.kernelPatches = [
+    #     {
+    #         name = "Rust Support";
+    #         patch = null;
+    #         features = {
+    #             rust = true;
+    #         };
+    #     }
+    # ];
 }

@@ -1,25 +1,13 @@
 { config, pkgs, lib, ... }:
 
 {
-  imports =
-    [
-      ./hardware-configuration.nix
-    ];
-
-  # Bootloader.
-  # boot.loader.grub.enable = true;
-  # boot.loader.grub.device = "/dev/vda";
-  # boot.loader.grub.useOSProber = true;
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
   networking.hostName = "nixos";
+  networking.networkmanager.enable = true;
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
-  networking.networkmanager.enable = true;
   time.timeZone = "Asia/Shanghai";
   i18n.defaultLocale = "zh_CN.UTF-8";
   i18n.extraLocaleSettings = {
@@ -47,9 +35,7 @@
   };
 
   nixpkgs.config.allowUnfree = true;
-
-  environment.systemPackages = with pkgs; [
-  ];
+  services.openssh.enable = true;
 
   system.stateVersion = "25.11";
 }

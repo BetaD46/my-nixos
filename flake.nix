@@ -16,19 +16,27 @@
       specialArgs = { inherit inputs; };
 
       modules = [
-        ./configuration.nix
-        ./my.nix
+        ./host/nixos/mod.nix
+        ./common/bootloader.nix
       ];
     };
 
     nixosConfigurations.nixos-niri = nixpkgs.lib.nixosSystem {
-      # 将 inputs 设置为内联，可在 modules 中引入 inputs
       specialArgs = { inherit inputs; };
 
       modules = [
-        ./configuration.nix
-        ./my.nix
-        ./nnn/desktop.nix
+        ./host/nixos/mod.nix
+        ./common/bootloader.nix
+        ./nnn/desktop/nix
+      ];
+    };
+
+    nixosConfigurations.hhh-boxes = nixpkgs.lib.nixosSystem {
+      specialArgs = { inherit inputs; };
+
+      modules = [
+        ./host/hhh-boxes/config.nix
+        ./host/hhh-boxes/bootloader.nix
       ];
     };
 

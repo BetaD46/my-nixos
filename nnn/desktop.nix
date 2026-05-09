@@ -20,7 +20,8 @@
       noto-fonts-cjk-serif
       noto-fonts-cjk-sans
       noto-fonts-color-emoji
-      pkgs.maple-mono.NF-CN
+      maple-mono.NF-CN
+      # nemo
     ];
 
     fontconfig = {
@@ -34,20 +35,8 @@
 
   programs.firefox.enable = true;
   programs.niri.enable = true;
-
-  programs.regreet = {
-    enable = true;
-    settings = {
-      GTK.application_prefer_dark_theme = true;
-    };
-    # For this example you'd need to have a version of Adwaita and the font Cantarell installed
-    theme.name = "Adwaita";
-    font = {
-      name = "Cantarell";
-      size = 16;
-    };
-    cursorTheme.name = "Adwaita";
-  };
+  # programs.niri.useNautilus = false;
+  programs.clash-verge.enable = true;
 
   home-manager = {
     useGlobalPkgs = true;

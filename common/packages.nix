@@ -8,6 +8,7 @@
     cargo
     nushell
     msedit
+    dust
   ];
   programs.bash.interactiveShellInit = ''
     if ! [ "$TERM" = "dumb" ] && [ -z "$BASH_EXECUTION_STRING" ]; then

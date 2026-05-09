@@ -339,13 +339,6 @@ window-rule {
     // block-out-from "screencast"
 }
 
-// Example: enable rounded corners for all windows.
-// (This example rule is commented out with a "/-" in front.)
-/-window-rule {
-    geometry-corner-radius 12
-    clip-to-geometry true
-}
-
 binds {
     // Keys consist of modifiers separated by + signs, followed by an XKB key name
     // in the end. To find an XKB name for a particular key, you may use a program
@@ -621,6 +614,38 @@ binds {
     // moving the mouse or pressing any other key.
     Mod+Shift+P { power-off-monitors; }
 }
-
+//=====================================================
 // start noctalia
 spawn-at-startup "noctalia-shell"
+
+// 所有窗口
+window-rule {
+    geometry-corner-radius 12
+    clip-to-geometry true
+    draw-border-with-background false
+
+    opacity 0.80
+    background-effect {
+        blur true
+    }
+}
+
+// 焦点窗口
+window-rule {
+    match is-active=true
+
+    draw-border-with-background false
+
+    opacity 0.92
+    background-effect {
+        blur true
+    }
+}
+
+blur {
+    // off
+    passes 3
+    offset 3
+    noise 0.02
+    saturation 1.5
+}

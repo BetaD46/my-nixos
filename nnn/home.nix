@@ -10,7 +10,6 @@
         window = {
           decorations = "None";
           padding.x = 16;
-          opacity = 0.96;
         };
       };
     };

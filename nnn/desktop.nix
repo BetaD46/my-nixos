@@ -11,7 +11,18 @@
     zed-editor
     nil
     nixd
+    nemo
   ];
+
+  # 输入法
+  i18n.inputMethod = {
+    type = "fcitx5";
+    enable = true;
+    fcitx5.addons = with pkgs; [
+      fcitx5-rime
+      fcitx5-gtk
+    ];
+  };
 
   # fonts
   fonts = {
@@ -35,9 +46,18 @@
 
   programs.firefox.enable = true;
   programs.niri.enable = true;
-  # programs.niri.useNautilus = false;
+  programs.niri.useNautilus = false;
   programs.clash-verge.enable = true;
 
+  # 设置默认文件管理器
+  xdg = {
+    mime.defaultApplications = {
+      "inode/directory" = [ "nemo.desktop" ];
+      "application/x-gnome-saved-search" = [ "nemo.desktop" ];
+    };
+  };
+
+  # home-manager 设置
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;

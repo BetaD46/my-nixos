@@ -9,6 +9,10 @@
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nur = {
+      url = "github:nix-community/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   # self 是 Flake 对外提供的功能（一个属性集），指向自身引用
@@ -18,6 +22,7 @@
       self,
       nixpkgs,
       home-manager,
+      nur,
     }:
     {
 

@@ -10,7 +10,7 @@
       # theme = "solarized_dark";
       settings = {
         window = {
-          decorations = "None";
+          # decorations = "None"; # 应由 niri 单独设置
           padding.x = 16;
         };
       };

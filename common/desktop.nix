@@ -3,12 +3,16 @@
 {
   environment.systemPackages = with pkgs; [
     zed-editor
+    libreoffice-qt
     nil
     nixd
   ];
 
   programs.firefox.enable = true;
   programs.clash-verge.enable = true;
+  # appimage 运行支持
+  programs.appimage.enable = true;
+  programs.appimage.binfmt = true;
 
   # 输入法
   i18n.inputMethod = {

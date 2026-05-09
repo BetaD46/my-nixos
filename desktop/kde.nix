@@ -1,7 +1,7 @@
 { pkgs, inputs, ... }:
 
 {
-  # Enable Plasma 
+  # Enable Plasma
   services.desktopManager.plasma6.enable = true;
   environment.plasma6.excludePackages = with pkgs.kdePackages; [
     # plasma-browser-integration
@@ -17,15 +17,14 @@
 
   # Default display manager for Plasma
   # services.displayManager.sddm = {
-    # enable = true;
-  
+  # enable = true;
+
   # To use Wayland (Experimental for SDDM)
-    # wayland.enable = true;
+  # wayland.enable = true;
   # };
 
   # Optionally enable xserver
   # services.xserver.enable = true;
-
 
   # home-manager 设置
   home-manager = {
@@ -35,7 +34,6 @@
   };
 
   imports = [
-    ../common/desktop.nix
     inputs.home-manager.nixosModules.default
   ];
 }

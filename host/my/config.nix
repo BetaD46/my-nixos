@@ -6,8 +6,7 @@
     ../../common/boot-sb.nix
     ../../common/system.nix
     ../../common/packages.nix
-    ../../common/nix-settings.nix
-    ../../common/desktop.nix
+    ../../desktop/base.nix
     ../../desktop/kde.nix
     ./hardware-configuration.nix
     # Adds the NUR overlay

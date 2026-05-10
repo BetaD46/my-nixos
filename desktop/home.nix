@@ -1,8 +1,6 @@
 { ... }:
 
 {
-  home.stateVersion = "25.11";
-
   # alacritty
   programs = {
     alacritty = {

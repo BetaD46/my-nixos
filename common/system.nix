@@ -1,5 +1,4 @@
 {
-  pkgs,
   ...
 }:
 
@@ -37,11 +36,33 @@
       "networkmanager"
       "wheel"
     ];
-    packages = with pkgs; [ ];
+    # packages = with pkgs; [ ];
   };
+
+  # bash 代替 sh 为默认 shell
+  programs.bash.enable = true;
 
   nixpkgs.config.allowUnfree = true;
   services.openssh.enable = true;
+
+  nix.settings = {
+    substituters = [ "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store" ];
+    experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
+  };
+
+  home-manager.users.wjf = {
+    imports = [
+      ./home.nix
+    ];
+  };
+
+  home-manager = {
+    useGlobalPkgs = true;
+    useUserPackages = true;
+  };
 
   system.stateVersion = "25.11";
 }

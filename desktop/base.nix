@@ -21,10 +21,14 @@
   i18n.inputMethod = {
     type = "fcitx5";
     enable = true;
-    fcitx5.addons = with pkgs; [
-      fcitx5-rime
-      fcitx5-gtk
-    ];
+    fcitx5 = {
+      # See https://fcitx-im.org/wiki/Using_Fcitx_5_on_Wayland
+      waylandFrontend = false;
+      addons = with pkgs; [
+        fcitx5-rime
+        fcitx5-gtk
+      ];
+    };
   };
 
   # fonts

@@ -9,7 +9,10 @@
   ];
 
   programs.firefox.enable = true;
-  programs.clash-verge.enable = true;
+  programs.clash-verge = {
+    enable = true;
+    tunMode = true; # 疑似无效
+  };
   # appimage 运行支持
   programs.appimage.enable = true;
   programs.appimage.binfmt = true;

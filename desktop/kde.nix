@@ -4,27 +4,30 @@
   # Enable Plasma
   services.desktopManager.plasma6.enable = true;
   environment.plasma6.excludePackages = with pkgs.kdePackages; [
-    # plasma-browser-integration
+    plasma-browser-integration
     konsole
-    # elisa
+    elisa
+    kate
+    sddm
   ];
 
   # PLM
-  services.displayManager = {
-    plasma-login-manager.enable = true;
-    autoLogin.user = "wjf"; # Replace with the desired user
-  };
-
-  # Default display manager for Plasma
-  # services.displayManager.sddm = {
-  # enable = true;
-
-  # To use Wayland (Experimental for SDDM)
-  # wayland.enable = true;
+  # 似乎不太稳定
+  # services.displayManager = {
+  #   plasma-login-manager.enable = true;
+  #   # autoLogin.user = "wjf"; # Replace with the desired user
   # };
 
+  # Default display manager for Plasma
+  services.displayManager.sddm = {
+    enable = true;
+
+    # To use Wayland (Experimental for SDDM)
+    wayland.enable = true;
+  };
+
   # Optionally enable xserver
-  # services.xserver.enable = true;
+  services.xserver.enable = true;
 
   # home-manager 设置
   home-manager = {

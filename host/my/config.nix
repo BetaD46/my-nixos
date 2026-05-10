@@ -14,5 +14,6 @@
     inputs.nur.modules.nixos.default
     # NUR modules can be imported directly:
     inputs.nur.repos.iopq.modules.nixos.xraya
+    ../../common/nur.nix
   ];
 }

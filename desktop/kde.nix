@@ -17,6 +17,20 @@
     # autoLogin.user = "wjf"; # Replace with the desired user
   };
 
+  # programs.regreet = {
+  #   enable = true;
+  #   settings = {
+  #     GTK.application_prefer_dark_theme = true;
+  #   };
+  #   # For this example you'd need to have a version of Adwaita and the font Cantarell installed
+  #   theme.name = "Adwaita";
+  #   font = {
+  #     name = "Cantarell";
+  #     size = 16;
+  #   };
+  #   cursorTheme.name = "Adwaita";
+  # };
+
   # Default display manager for Plasma
   # services.displayManager.sddm = {
   #   enable = true;

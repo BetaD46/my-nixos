@@ -25,11 +25,16 @@
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
-    users.wjf = ./niri/home.nix;
+    users.wjf = {
+      imports = [
+        ../common/home.nix
+        ./niri/home.nix
+        ./home.nix
+      ];
+    };
   };
 
   imports = [
-    ../common/desktop.nix
     inputs.home-manager.nixosModules.default
   ];
 }

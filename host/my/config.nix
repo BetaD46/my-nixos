@@ -7,7 +7,9 @@
     ../../common/system.nix
     ../../common/packages.nix
     ../../desktop/base.nix
-    ../../desktop/kde.nix
+    # ../../desktop/kde.nix
+    ../../desktop/niri.nix
+    ../../desktop/regreet.nix
     ./hardware-configuration.nix
     # Adds the NUR overlay
     inputs.nur.modules.nixos.default

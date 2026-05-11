@@ -621,7 +621,14 @@ binds {
 //=====================================================
 // start noctalia
 spawn-at-startup "noctalia-shell"
+spawn-at-startup "waybar"
 spawn-at-startup "fcitx5"
+
+environment {
+    QT_QPA_PLATFORMTHEME "kde"
+    QT_QPA_PLATFORM "wayland"
+    DISPLAY null
+}
 
 // 所有窗口
 window-rule {

@@ -11,6 +11,7 @@
   programs.firefox.enable = true;
   programs.clash-verge = {
     enable = true;
+    autoStart = true;
     tunMode = true; # 疑似无效
   };
   # appimage 运行支持

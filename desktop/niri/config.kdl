@@ -624,12 +624,6 @@ spawn-at-startup "noctalia-shell"
 spawn-at-startup "waybar"
 spawn-at-startup "fcitx5"
 
-environment {
-    QT_QPA_PLATFORMTHEME "kde"
-    QT_QPA_PLATFORM "wayland"
-    DISPLAY null
-}
-
 // 所有窗口
 window-rule {
     geometry-corner-radius 12
@@ -660,4 +654,8 @@ blur {
     offset 3
     noise 0.02
     saturation 1.5
+}
+
+output "Beihai Century Joint Innovation Technology Co.,Ltd X276S+ 0000000000000" {
+    mode custom=true "2560x1440@143.912"
 }

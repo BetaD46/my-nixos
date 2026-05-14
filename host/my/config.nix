@@ -9,6 +9,7 @@
     ../../desktop/base.nix
     # ../../desktop/kde.nix
     ../../desktop/niri.nix
+    # ../../desktop/cinnamon.nix
     ../../desktop/regreet.nix
     ./hardware-configuration.nix
     # Adds the NUR overlay

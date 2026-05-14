@@ -8,10 +8,23 @@
   environment.systemPackages = with pkgs; [
     noctalia-shell
     nemo
+    xwayland-satellite
   ];
+
+  # programs.xwayland.enable = true;
+  # programs.labwc.enable = true;
 
   programs.niri.enable = true;
   programs.niri.useNautilus = false;
+
+  qt = {
+    enable = true;
+    platformTheme = "qt5ct";
+  };
+
+  environment.variables = {
+    QT_QPA_PLATFORM = "wayland";
+  };
 
   # 设置默认文件管理器
   xdg = {

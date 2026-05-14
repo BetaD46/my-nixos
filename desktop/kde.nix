@@ -11,11 +11,11 @@
     sddm
   ];
 
-  # PLM
-  services.displayManager = {
-    plasma-login-manager.enable = true;
-    # autoLogin.user = "wjf"; # Replace with the desired user
-  };
+  # # PLM
+  # services.displayManager = {
+  #   plasma-login-manager.enable = true;
+  #   # autoLogin.user = "wjf"; # Replace with the desired user
+  # };
 
   # programs.regreet = {
   #   enable = true;
@@ -40,7 +40,7 @@
   # };
 
   # Optionally enable xserver
-  services.xserver.enable = true;
+  # services.xserver.enable = true;
 
   home-manager.users.wjf = {
     imports = [

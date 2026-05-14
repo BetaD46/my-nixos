@@ -9,6 +9,8 @@
     noctalia-shell
     nemo
     xwayland-satellite
+    fastfetch
+    papirus-icon-theme
   ];
 
   # programs.xwayland.enable = true;

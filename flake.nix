@@ -13,6 +13,7 @@
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
   };
 
   # self 是 Flake 对外提供的功能（一个属性集），指向自身引用
@@ -23,6 +24,7 @@
       nixpkgs,
       home-manager,
       nur,
+      nix-cachyos-kernel,
     }:
     {
 

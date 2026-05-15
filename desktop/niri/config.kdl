@@ -658,4 +658,5 @@ blur {
 
 output "Beihai Century Joint Innovation Technology Co.,Ltd X276S+ 0000000000000" {
     mode custom=true "2560x1440@180"
+    scale 1.25
 }

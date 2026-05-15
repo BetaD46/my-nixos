@@ -35,6 +35,7 @@
     extraGroups = [
       "networkmanager"
       "wheel"
+      "docker"
     ];
     # packages = with pkgs; [ ];
   };
@@ -44,6 +45,9 @@
 
   nixpkgs.config.allowUnfree = true;
   services.openssh.enable = true;
+
+  # docker
+  virtualisation.docker.enable = true;
 
   nix.settings = {
     substituters = [ "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store" ];

@@ -14,6 +14,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
+    zen-browser = {
+      url = "github:youwen5/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   # self 是 Flake 对外提供的功能（一个属性集），指向自身引用
@@ -25,6 +30,8 @@
       home-manager,
       nur,
       nix-cachyos-kernel,
+      nix-flatpak,
+      zen-browser,
     }:
     {
 

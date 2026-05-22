@@ -1,14 +1,14 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
-    zed-editor
     libreoffice-qt
     nil
     nixd
+    inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
-  programs.firefox.enable = true;
+  # programs.firefox.enable = true;
   programs.clash-verge = {
     enable = true;
     autoStart = true;

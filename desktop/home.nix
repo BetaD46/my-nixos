@@ -14,5 +14,6 @@
         };
       };
     };
+    zed-editor.enable = true;
   };
 }

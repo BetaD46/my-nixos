@@ -6,7 +6,6 @@
     git
     rustc
     cargo
-    # nushell
     msedit
     dust
   ];

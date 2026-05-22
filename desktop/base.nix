@@ -6,6 +6,7 @@
     nil
     nixd
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
+    dbeaver-bin
   ];
 
   # programs.firefox.enable = true;

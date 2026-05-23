@@ -9,7 +9,6 @@
     # noctalia-shell
     nemo
     xwayland-satellite
-    fastfetch
     papirus-icon-theme
   ];
 

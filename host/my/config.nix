@@ -24,5 +24,6 @@
     inputs.nur.repos.iopq.modules.nixos.xraya
     ../../common/nur.nix
     ../../desktop/flatpak.nix
+    ../../common/nvidia.nix
   ];
 }

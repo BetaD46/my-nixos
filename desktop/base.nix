@@ -7,6 +7,7 @@
     nixd
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     dbeaver-bin
+    fastfetch
   ];
 
   # programs.firefox.enable = true;

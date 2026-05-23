@@ -5,7 +5,7 @@
   nixpkgs.overlays = [
     inputs.nix-cachyos-kernel.overlays.default
   ];
-  boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest-lto-zen4;
+  boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest-zen4;
   # boot.loader.grub.device = "/dev/nvme0n1p2";
 
   imports = [

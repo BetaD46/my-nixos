@@ -12,6 +12,7 @@
       "com.tencent.WeChat"
       "com.qq.QQ"
       "com.qq.QQmusic"
+      "com.cherry_ai.CherryStudio"
     ];
   };
   systemd.services.flatpak-repo = {

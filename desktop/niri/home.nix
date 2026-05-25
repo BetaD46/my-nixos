@@ -28,6 +28,12 @@
     };
   };
 
+  # alacritty niri + dms 专用配置
+  programs.alacritty.settings = {
+    window.decorations = "None";
+    general.import = [ "./dank-theme.toml" ];
+  };
+
   # waybar 与其配置文件
   # programs.waybar = {
   #   enable = true;

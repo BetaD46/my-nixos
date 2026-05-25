@@ -11,7 +11,21 @@
         window = {
           # decorations = "None"; # 应由 niri 单独设置
           padding.x = 16;
+          padding.y = 16;
         };
+        keyboard.bindings = [
+          {
+            key = "`";
+            mods = "Control";
+            action = "CreateNewWindow";
+          }
+        ];
+        mouse.bindings = [
+          {
+            mouse = "Right";
+            action = "Copy";
+          }
+        ];
       };
     };
 

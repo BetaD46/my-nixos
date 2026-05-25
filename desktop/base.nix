@@ -41,7 +41,7 @@
       noto-fonts-cjk-serif
       noto-fonts-cjk-sans
       noto-fonts-color-emoji
-      maple-mono.NF-CN
+      maple-mono.NF-CN-unhinted
       # nemo
     ];
 
@@ -50,6 +50,7 @@
         serif = [ "Noto Serif CJK SC" ];
         sansSerif = [ "Noto Sans CJK SC" ];
         monospace = [ "Maple Mono NF CN" ];
+        emoji = [ "Noto Color Emoji" ];
       };
     };
   };

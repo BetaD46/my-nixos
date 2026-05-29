@@ -18,6 +18,11 @@
   programs.niri.enable = true;
   programs.niri.useNautilus = false;
 
+  services.displayManager.dms-greeter = {
+    enable = true;
+    compositor.name = "niri";
+  };
+
   # dms
   programs.dms-shell = {
     enable = true;

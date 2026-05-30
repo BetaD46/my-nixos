@@ -8,8 +8,12 @@
   boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest-zen4;
   # boot.loader.grub.device = "/dev/nvme0n1p2";
 
+  # 节省空间使用 systemd boot
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.systemd-boot.configurationLimit = 3;
+  boot.loader.efi.canTouchEfiVariables = true;
+
   imports = [
-    ../../common/boot-sb.nix
     ../../common/system.nix
     ../../common/packages.nix
     ../../desktop/base.nix

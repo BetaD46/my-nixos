@@ -7,7 +7,7 @@
   programs = {
     nushell = {
       enable = true;
-      configFile.source = ./nushell/config.nu;
+      configFile.source = ../configs/nushell/config.nu;
     };
 
     git = {
@@ -29,5 +29,11 @@
         "/.local"
       ];
     };
+
+    starship = {
+      enable = true;
+      enableNushellIntegration = true;
+    };
   };
+  xdg.configFile."./starship.toml".source = ../configs/starship.toml;
 }

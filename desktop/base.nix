@@ -8,6 +8,7 @@
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     dbeaver-bin
     fastfetch
+    hurl
   ];
 
   # programs.firefox.enable = true;

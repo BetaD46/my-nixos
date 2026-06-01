@@ -6,6 +6,9 @@
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
 
+  # /.local/bin 加入 path 环境变量
+  environment.localBinInPath = true;
+
   security.sudo-rs.enable = true;
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";

@@ -9,6 +9,7 @@
     dbeaver-bin
     fastfetch
     hurl
+    lx-music-desktop
   ];
 
   # programs.firefox.enable = true;

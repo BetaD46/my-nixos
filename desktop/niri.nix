@@ -7,7 +7,8 @@
 {
   environment.systemPackages = with pkgs; [
     # noctalia-shell
-    nemo
+    # nemo
+    kdePackages.dolphin
     xwayland-satellite
     papirus-icon-theme
   ];
@@ -53,8 +54,8 @@
   # 设置默认文件管理器
   xdg = {
     mime.defaultApplications = {
-      "inode/directory" = [ "nemo.desktop" ];
-      "application/x-gnome-saved-search" = [ "nemo.desktop" ];
+      "inode/directory" = [ "dolphin.desktop" ];
+      "application/x-gnome-saved-search" = [ "dolphin.desktop" ];
     };
   };
 

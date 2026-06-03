@@ -51,7 +51,16 @@
   services.openssh.enable = true;
 
   # docker
-  virtualisation.docker.enable = true;
+  virtualisation.docker = {
+    enable = true;
+    daemon.settings = {
+      userland-proxy = false;
+      proxies = {
+        http-proxy = "http://127.0.0.1:7897";
+        https-proxy = "http://127.0.0.1:7897";
+      };
+    };
+  };
 
   nix.settings = {
     substituters = [ "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store" ];

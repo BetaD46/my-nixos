@@ -19,8 +19,8 @@
     tunMode = true; # 疑似无效
   };
   # appimage 运行支持
-  programs.appimage.enable = true;
-  programs.appimage.binfmt = true;
+  # programs.appimage.enable = true;
+  # programs.appimage.binfmt = true;
 
   # 输入法
   i18n.inputMethod = {
@@ -48,6 +48,7 @@
     ];
 
     fontconfig = {
+      hinting.enable = false;
       defaultFonts = {
         serif = [ "Noto Serif CJK SC" ];
         sansSerif = [ "Noto Sans CJK SC" ];

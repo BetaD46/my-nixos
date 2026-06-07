@@ -4,6 +4,7 @@
   # Bootloader.
   boot.loader.grub.enable = true;
   boot.loader.grub.configurationLimit = 3;
+  boot.loader.grub.default = "3";
   # boot.loader.grub.device = "/dev/sda";
   # boot.loader.grub.useOSProber = true;
   # boot.loader.systemd-boot.enable = true;

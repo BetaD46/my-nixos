@@ -25,6 +25,7 @@
   };
 
   # dms
+  programs.dsearch.enable = true;
   programs.dms-shell = {
     enable = true;
 

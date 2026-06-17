@@ -8,6 +8,7 @@
     uv
     msedit
     dust
+    helix
   ];
 
   # 使 uv 安装的 python 可以使用动态链接的库

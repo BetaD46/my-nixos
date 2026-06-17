@@ -8,7 +8,7 @@
   environment.systemPackages = with pkgs; [
     # noctalia-shell
     # nemo
-    kdePackages.dolphin
+    # kdePackages.dolphin
     xwayland-satellite
     papirus-icon-theme
   ];
@@ -18,6 +18,12 @@
 
   programs.niri.enable = true;
   programs.niri.useNautilus = false;
+
+  # 文件管理器
+  programs.thunar.enable = true;
+  programs.xfconf.enable = true;
+  services.gvfs.enable = true; # 支持流媒体传输、回收站等
+  environment.variables.GTK_THEME = "Adwaita:dark"; # 使用深色主题
 
   services.displayManager.dms-greeter = {
     enable = true;
@@ -53,12 +59,12 @@
   };
 
   # 设置默认文件管理器
-  xdg = {
-    mime.defaultApplications = {
-      "inode/directory" = [ "dolphin.desktop" ];
-      "application/x-gnome-saved-search" = [ "dolphin.desktop" ];
-    };
-  };
+  # xdg = {
+  #   mime.defaultApplications = {
+  #     "inode/directory" = [ "dolphin.desktop" ];
+  #     "application/x-gnome-saved-search" = [ "dolphin.desktop" ];
+  #   };
+  # };
 
   # home-manager 设置
   home-manager = {

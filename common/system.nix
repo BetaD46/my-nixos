@@ -46,9 +46,10 @@
 
   # bash 代替 sh 为默认 shell
   programs.bash.enable = true;
-
   nixpkgs.config.allowUnfree = true;
   services.openssh.enable = true;
+
+  environment.sessionVariables.EDITOR = "hx";
 
   # docker
   virtualisation.docker = {

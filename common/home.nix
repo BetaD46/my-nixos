@@ -28,6 +28,9 @@
       ignores = [
         "**.local**"
       ];
+      settings = {
+        credential.helper = "libsecret";
+      };
     };
 
     starship = {

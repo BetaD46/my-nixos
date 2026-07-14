@@ -11,14 +11,17 @@
     # kdePackages.dolphin
     xwayland-satellite
     papirus-icon-theme
+    seahorse
   ];
 
   # programs.xwayland.enable = true;
   # programs.labwc.enable = true;
 
+  # 启用 gnome-keyring
+  services.gnome.gnome-keyring.enable = true;
+
   programs.niri.enable = true;
   programs.niri.useNautilus = false;
-
   # 文件管理器
   programs.thunar.enable = true;
   programs.xfconf.enable = true;

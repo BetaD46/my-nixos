@@ -9,7 +9,7 @@
     # noctalia-shell
     # nemo
     # kdePackages.dolphin
-    xwayland-satellite
+    xwayland-satellite # 解决 x11 应用兼容问题
     papirus-icon-theme
     seahorse
   ];
@@ -22,6 +22,7 @@
 
   programs.niri.enable = true;
   programs.niri.useNautilus = false;
+
   # 文件管理器
   programs.thunar.enable = true;
   programs.xfconf.enable = true;
@@ -45,11 +46,11 @@
 
     # Core features
     enableSystemMonitoring = true; # System monitoring widgets (dgop)
-    enableVPN = true; # VPN management widget
+    enableVPN = false; # VPN management widget
     enableDynamicTheming = true; # Wallpaper-based theming (matugen)
     enableAudioWavelength = true; # Audio visualizer (cava)
     # enableCalendarEvents = true; # Calendar integration (khal)
-    enableClipboardPaste = true; # Pasting from the clipboard history (wtype)
+    enableClipboardPaste = false; # Pasting from the clipboard history (wtype)
   };
 
   qt = {

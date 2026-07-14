@@ -16,6 +16,7 @@
     include "./dms/windowrules.kdl"
     include "./dms/alttab.kdl"
     include "./dms/outputs.kdl"
+    include "./dms/layout.kdl"
   '';
 
   # nemo 终端设置

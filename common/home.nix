@@ -26,7 +26,7 @@
         }
       ];
       ignores = [
-        "/.local"
+        "**.local**"
       ];
     };
 

@@ -13,6 +13,7 @@
       "com.qq.QQ"
       "com.qq.QQmusic"
       "com.cherry_ai.CherryStudio"
+      "com.github.tchx84.Flatseal"
     ];
   };
   systemd.services.flatpak-repo = {

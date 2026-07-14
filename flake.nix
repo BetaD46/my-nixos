@@ -34,27 +34,10 @@
       zen-browser,
     }:
     {
-
-      nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-        # 将 inputs 设置为内联，可在 modules 中引入 inputs
+      nixosConfigurations.hhh = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
         modules = [
-          ./host/nixos/mod.nix
-        ];
-      };
-
-      nixosConfigurations.nixos-niri = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; };
-        modules = [
-          ./host/nixos/mod.nix
-          ./nnn/desktop/nix
-        ];
-      };
-
-      nixosConfigurations.hhh-vb = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; };
-        modules = [
-          ./host/hhh-vb/config.nix
+          ./host/hhh/config.nix
         ];
       };
 

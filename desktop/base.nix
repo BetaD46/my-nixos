@@ -6,7 +6,7 @@
     nil
     nixd
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
-    dbeaver-bin
+    # dbeaver-bin
     fastfetch
     hurl
     lx-music-desktop

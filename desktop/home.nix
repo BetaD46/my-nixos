@@ -12,6 +12,10 @@
           # decorations = "None"; # 应由 niri 单独设置
           padding.x = 16;
           padding.y = 16;
+          dimensions = {
+            columns = 108;
+            lines = 64;
+          };
         };
         keyboard.bindings = [
           {

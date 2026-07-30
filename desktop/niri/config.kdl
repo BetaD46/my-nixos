@@ -651,6 +651,11 @@ window-rule {
     }
 }
 
+window-rule {
+    match app-id="^zen$" title="^Zen Browser$"
+    open-maximized true
+}
+
 blur {
     // off
     passes 3

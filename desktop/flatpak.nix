@@ -14,6 +14,7 @@
       "com.qq.QQmusic"
       "com.cherry_ai.CherryStudio"
       "com.github.tchx84.Flatseal"
+      "com.dingtalk.DingTalk"
     ];
   };
   systemd.services.flatpak-repo = {

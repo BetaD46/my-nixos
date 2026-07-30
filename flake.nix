@@ -4,6 +4,7 @@
   inputs = {
     # 这个 Flake 依赖了 nixpkgs
     # .url 指定来源
+    nixpkgs-stable.url = "github:nixos/nixpkgs?ref=nixos-26.05";
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     home-manager = {
       url = "github:nix-community/home-manager/master";
@@ -27,6 +28,7 @@
     inputs@{
       self,
       nixpkgs,
+      nixpkgs-stable,
       home-manager,
       nur,
       nix-cachyos-kernel,

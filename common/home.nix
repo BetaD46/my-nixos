@@ -39,4 +39,7 @@
     };
   };
   xdg.configFile."./starship.toml".source = ../configs/starship.toml;
+
+  # 设置用户目录为默认英文
+  xdg.userDirs.enable = true;
 }

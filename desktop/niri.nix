@@ -12,6 +12,7 @@
     xwayland-satellite # 解决 x11 应用兼容问题
     papirus-icon-theme
     seahorse
+    wl-clipboard # wayland 剪切板控制
   ];
 
   # programs.xwayland.enable = true;

@@ -12,8 +12,16 @@
     # inputs.nixpkgs-stable.legacyPackages.x86_64-linux.clash-verge-rev
     chromium
     libnotify # 桌面通知工具
+    wireshark
+    # postman
+    wpsoffice-cn
   ];
 
+  programs.wireshark = {
+    enable = true;
+    dumpcap.enable = true;
+    package = pkgs.wireshark-cli;
+  };
   # programs.firefox.enable = true;
   # programs.clash-verge = {
   #   enable = true;
@@ -50,6 +58,8 @@
       noto-fonts-cjk-sans
       noto-fonts-color-emoji
       maple-mono.NF-CN-unhinted
+      source-han-sans
+      source-han-serif
       # nemo
     ];
 

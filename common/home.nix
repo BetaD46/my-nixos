@@ -42,4 +42,11 @@
 
   # 设置用户目录为默认英文
   xdg.userDirs.enable = true;
+
+  # 设置 cargo、pnpm 的 bin 目录
+  home.sessionPath = [
+    "$HOME/.cargo/bin"
+    "$HOME/.local/share/pnpm/bin"
+  ];
+
 }

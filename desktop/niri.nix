@@ -11,8 +11,9 @@
     # kdePackages.dolphin
     xwayland-satellite # 解决 x11 应用兼容问题
     papirus-icon-theme
-    seahorse
+    seahorse # 密钥管理 UI
     wl-clipboard # wayland 剪切板控制
+    doublecmd
   ];
 
   # programs.xwayland.enable = true;
@@ -53,6 +54,9 @@
     # enableCalendarEvents = true; # Calendar integration (khal)
     enableClipboardPaste = false; # Pasting from the clipboard history (wtype)
   };
+
+  # 蓝牙管理
+  services.blueman.enable = true;
 
   qt = {
     enable = true;

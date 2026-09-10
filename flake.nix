@@ -20,6 +20,10 @@
       url = "github:youwen5/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    noctalia = {
+      url = "github:noctalia-dev/noctalia";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   # self 是 Flake 对外提供的功能（一个属性集），指向自身引用
@@ -34,6 +38,7 @@
       nix-cachyos-kernel,
       nix-flatpak,
       zen-browser,
+      noctalia,
     }:
     {
       nixosConfigurations.hhh = nixpkgs.lib.nixosSystem {

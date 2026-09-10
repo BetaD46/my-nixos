@@ -13,7 +13,7 @@
     papirus-icon-theme
     seahorse # 密钥管理 UI
     wl-clipboard # wayland 剪切板控制
-    doublecmd
+    doublecmd # 文件管理器
   ];
 
   # programs.xwayland.enable = true;
@@ -31,29 +31,37 @@
   services.gvfs.enable = true; # 支持流媒体传输、回收站等
   environment.variables.GTK_THEME = "Adwaita:dark"; # 使用深色主题
 
-  services.displayManager.dms-greeter = {
+  services.displayManager.noctalia-greeter = {
     enable = true;
-    compositor.name = "niri";
-  };
-
-  # dms
-  programs.dsearch.enable = true;
-  programs.dms-shell = {
-    enable = true;
-
-    systemd = {
-      enable = true; # Systemd service for auto-start
-      restartIfChanged = true; # Auto-restart dms.service when dms-shell changes
+    cursorTheme = {
+      package = pkgs.bibata-cursors;
+      name = "Bibata-Modern-Ice";
     };
-
-    # Core features
-    enableSystemMonitoring = true; # System monitoring widgets (dgop)
-    enableVPN = false; # VPN management widget
-    enableDynamicTheming = true; # Wallpaper-based theming (matugen)
-    enableAudioWavelength = true; # Audio visualizer (cava)
-    # enableCalendarEvents = true; # Calendar integration (khal)
-    enableClipboardPaste = false; # Pasting from the clipboard history (wtype)
   };
+
+  # services.displayManager.dms-greeter = {
+  #   enable = true;
+  #   compositor.name = "niri";
+  # };
+
+  # # dms
+  # programs.dsearch.enable = true;
+  # programs.dms-shell = {
+  #   enable = true;
+
+  #   systemd = {
+  #     enable = true; # Systemd service for auto-start
+  #     restartIfChanged = true; # Auto-restart dms.service when dms-shell changes
+  #   };
+
+  #   # Core features
+  #   enableSystemMonitoring = true; # System monitoring widgets (dgop)
+  #   enableVPN = false; # VPN management widget
+  #   enableDynamicTheming = true; # Wallpaper-based theming (matugen)
+  #   enableAudioWavelength = true; # Audio visualizer (cava)
+  #   # enableCalendarEvents = true; # Calendar integration (khal)
+  #   enableClipboardPaste = false; # Pasting from the clipboard history (wtype)
+  # };
 
   # 蓝牙管理
   services.blueman.enable = true;
@@ -84,6 +92,7 @@
         ../common/home.nix
         ./niri/home.nix
         ./home.nix
+        inputs.noctalia.homeModules.default
       ];
     };
   };

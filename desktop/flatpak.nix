@@ -16,6 +16,11 @@
       "com.github.tchx84.Flatseal"
       "com.dingtalk.DingTalk"
     ];
+    overrides = {
+      global = {
+        Context.filesystems = [ "/nix/store:ro" ]; # 允许 flatpak 只读访问 nix store
+      };
+    };
   };
   systemd.services.flatpak-repo = {
     wantedBy = [ "multi-user.target" ];

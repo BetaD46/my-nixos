@@ -1,0 +1,11 @@
+binds {
+    Mod+Tab repeat=false { toggle-overview; }
+    Mod+Space { toggle-window-floating; }
+
+    // ========== noctalia ==========
+    Mod+V hotkey-overlay-title="Clipboard" { spawn-sh "noctalia msg panel-toggle clipboard"; }
+    Mod+D hotkey-overlay-title="Launcher" { spawn-sh "noctalia msg panel-toggle launcher"; }
+    Alt+Tab { spawn-sh "noctalia msg window-switcher"; }
+    Super+Shift+S hotkey-overlay-title="Screenshot" { spawn-sh "noctalia msg screenshot-region"; }
+    Super+Alt+L hotkey-overlay-title="Lock Screen" { spawn-sh "noctalia msg session lock"; }
+}

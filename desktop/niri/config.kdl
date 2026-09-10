@@ -613,17 +613,9 @@ binds {
     // Powers off the monitors. To turn them back on, do any input like
     // moving the mouse or pressing any other key.
     Mod+Shift+P { power-off-monitors; }
-
-    // ===================================================
-
-    // Mod+D { spawn-sh "noctalia-shell ipc call launcher toggle"; }
-    Mod+Tab repeat=false { toggle-overview; }
-    Super+Shift+S { screenshot; }
-    Super+Alt+L hotkey-overlay-title="Lock Screen" { spawn "dms" "ipc" "call" "lock" "lock"; }
 }
 //=====================================================
-// start noctalia
-spawn-at-startup "noctalia-shell"
+spawn-at-startup "noctalia"
 spawn-at-startup "waybar"
 spawn-at-startup "fcitx5"
 
@@ -645,7 +637,7 @@ window-rule {
 
     draw-border-with-background false
 
-    opacity 0.92
+    opacity 0.96
     background-effect {
         blur true
     }
@@ -669,4 +661,10 @@ blur {
 //     scale 1.25
 // }
 
-include "extra.kdl"
+
+// DMS 设置
+// include "dms.kdl"
+
+include "noctalia.kdl"
+
+include "mybinds.kdl"

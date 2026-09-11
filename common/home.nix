@@ -10,6 +10,14 @@
       configFile.source = ../configs/nushell/config.nu;
     };
 
+    zoxide = {
+      enable = true;
+      enableBashIntegration = true;
+      options = [
+        "--cmd cd" # 这将用 zoxide 替换 cd 命令
+      ];
+    };
+
     git = {
       enable = true;
       lfs.enable = true;
@@ -37,6 +45,17 @@
       enable = true;
       enableNushellIntegration = true;
     };
+
+    bash = {
+      enable = true;
+      bashrcExtra = ''
+        if ! [ -f "$HOME/.zoxide.nu" ];
+        then
+          zoxide init nushell > "$HOME/.zoxide.nu"
+          echo "Zoxide init nushell done."
+        fi
+      '';
+    };
   };
   xdg.configFile."./starship.toml".source = ../configs/starship.toml;
 
@@ -48,5 +67,4 @@
     "$HOME/.cargo/bin"
     "$HOME/.local/share/pnpm/bin"
   ];
-
 }

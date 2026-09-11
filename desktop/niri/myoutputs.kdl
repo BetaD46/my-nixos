@@ -1,0 +1,10 @@
+output "Beihai Century Joint Innovation Technology Co.,Ltd X276S+ 0000000000000" {
+    mode custom=true "2560x1440@180"
+    scale 1.25
+}
+
+output "HDMI-A-1" {
+    mode "1920x1080@74.973"
+    scale 1
+    position x=0 y=0
+}

@@ -20,6 +20,15 @@
     force = true;
   };
 
+  xdg.configFile."niri/noctalia.kdl" = {
+    text = ''
+      include "my.kdl"
+      include "mybinds.kdl"
+      include "myoutputs.kdl"
+    '';
+    force = true;
+  };
+
   # dms 配置
   # xdg.configFile."niri/dms.kdl".text = ''
   #   include "./dms/wpblur.kdl"

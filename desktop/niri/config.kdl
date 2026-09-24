@@ -660,6 +660,3 @@ blur {
 // include "dms.kdl"
 
 include "noctalia.kdl"
-
-include "mybinds.kdl"
-include "myoutputs.kdl"

@@ -2,7 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    libreoffice-qt
+    # libreoffice-qt
     nil
     nixd
     # inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
@@ -15,6 +15,7 @@
     wireshark
     # postman
     wpsoffice-cn
+    vscode
   ];
 
   programs.wireshark = {

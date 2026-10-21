@@ -11,7 +11,6 @@
     unzip
     just
     bun
-    nodejs
     pnpm
     python3
     gnumake
@@ -24,6 +23,8 @@
     pkg-config
     tmux # 终端复用
     unrar # 解压 rar
+    nixfmt # 格式化 nix 文件
+    xclip # 剪贴板工具
   ];
 
   # 使 uv 安装的 python 可以使用动态链接的库
@@ -31,15 +32,17 @@
     enable = true;
     libraries = with pkgs; [
       stdenv.cc.cc.lib
+      gcc
       glibc
       zlib
       openssl
     ];
   };
 
-  programs.bash.interactiveShellInit = ''
-    if ! [ "$TERM" = "dumb" ] && [ -z "$BASH_EXECUTION_STRING" ]; then
-      exec nu
-    fi
-  '';
+  # bash 自动启动 nu
+  # programs.bash.interactiveShellInit = ''
+  #   if ! [ "$TERM" = "dumb" ] && [ -z "$BASH_EXECUTION_STRING" ]; then
+  #     exec nu
+  #   fi
+  # '';
 }

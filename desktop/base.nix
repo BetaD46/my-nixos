@@ -5,7 +5,7 @@
     libreoffice-qt
     nil
     nixd
-    inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
+    # inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     dbeaver-bin
     fastfetch
     lx-music-desktop

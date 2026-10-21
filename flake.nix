@@ -16,10 +16,10 @@
     };
     nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
-    zen-browser = {
-      url = "github:youwen5/zen-browser-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # zen-browser = {
+    #   url = "github:youwen5/zen-browser-flake";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
     noctalia = {
       url = "github:noctalia-dev/noctalia";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -37,7 +37,7 @@
       nur,
       nix-cachyos-kernel,
       nix-flatpak,
-      zen-browser,
+      # zen-browser,
       noctalia,
     }:
     {

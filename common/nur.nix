@@ -6,6 +6,7 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    nur.repos.xddxdd.dingtalk
+    # nur.repos.xddxdd.dingtalk
+    nur.repos.jeremymeadows.zen-browser
   ];
 }

@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ inputs, pkgs, ... }:
 
 {
   # cachyos 内核编译时间长，根据主机选择使用
@@ -6,6 +6,7 @@
   #   inputs.nix-cachyos-kernel.overlays.default
   # ];
   # boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest-zen4;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   boot.loader.grub.device = "/dev/nvme0n1p1";
   boot.loader.grub.configurationLimit = 5;

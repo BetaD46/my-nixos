@@ -30,6 +30,11 @@
             action = "Copy";
           }
         ];
+        terminal = {
+          shell = {
+            program = "/etc/profiles/per-user/wjf/bin/nu";
+          };
+        };
       };
     };
 

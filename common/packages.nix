@@ -25,17 +25,32 @@
     unrar # 解压 rar
     nixfmt # 格式化 nix 文件
     xclip # 剪贴板工具
+
+    # 运行需要编译或包含未用 nix 预编译库的 Python 包
+    (pkgs.writeShellScriptBin "python" ''
+      export LD_LIBRARY_PATH=$NIX_LD_LIBRARY_PATH
+      exec ${pkgs.python3}/bin/python "$@"
+    '')
   ];
 
-  # 使 uv 安装的 python 可以使用动态链接的库
+  # 总之，使 uv 安装的 python 可以使用动态链接的库
   programs.nix-ld = {
     enable = true;
     libraries = with pkgs; [
-      stdenv.cc.cc.lib
-      gcc
-      glibc
       zlib
+      zstd
+      stdenv.cc.cc
+      curl
       openssl
+      attr
+      libssh
+      bzip2
+      libxml2
+      acl
+      libsodium
+      util-linux
+      xz
+      systemd
     ];
   };
 

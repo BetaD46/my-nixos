@@ -5,6 +5,10 @@
   home.stateVersion = "26.05";
 
   programs = {
+    fish = {
+      enable = true;
+    };
+
     nushell = {
       enable = true;
       configFile.source = ../configs/nushell/config.nu;
@@ -58,6 +62,10 @@
     };
   };
   xdg.configFile."./starship.toml".source = ../configs/starship.toml;
+
+  xdg.configFile."./fish/config.fish" = {
+    source = ../configs/fish/config.fish;
+  };
 
   # 设置用户目录为默认英文
   xdg.userDirs.enable = true;

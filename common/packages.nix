@@ -26,6 +26,7 @@
     nixfmt # 格式化 nix 文件
     xclip # 剪贴板工具
     ripgrep # grep 的 rust 升级版
+    fd # find 的 rust 升级版
 
     # 运行需要编译或包含未用 nix 预编译库的 Python 包
     (pkgs.writeShellScriptBin "python" ''

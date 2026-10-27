@@ -14,6 +14,7 @@
     pnpm
     python3
     gnumake
+    wget # 下载文件工具
     lsof # 查看进程使用的文件
     dust # 检查空间占用
     libsecret # 密钥管理

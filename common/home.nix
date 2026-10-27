@@ -12,6 +12,7 @@
     nushell = {
       enable = true;
       configFile.source = ../configs/nushell/config.nu;
+      loadSessionVariables = true;
     };
 
     zoxide = {

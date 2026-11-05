@@ -1,6 +1,4 @@
-{
-  ...
-}:
+{ inputs, ... }:
 
 {
   networking.hostName = "nixos";
@@ -77,6 +75,10 @@
     useUserPackages = true;
     users.wjf.imports = [ ./home.nix ];
   };
+
+  imports = [
+    inputs.home-manager.nixosModules.default
+  ];
 
   system.stateVersion = "26.05";
 }

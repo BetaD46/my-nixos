@@ -43,5 +43,10 @@
     obsidian.enable = true;
 
     ghostty.enable = true;
+
+    starship = {
+      enable = true;
+      enableNushellIntegration = true;
+    };
   };
 }

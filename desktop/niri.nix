@@ -88,8 +88,4 @@
     ./niri/home.nix
     inputs.noctalia.homeModules.default
   ];
-
-  imports = [
-    inputs.home-manager.nixosModules.default
-  ];
 }

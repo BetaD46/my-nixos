@@ -46,11 +46,6 @@
       };
     };
 
-    starship = {
-      enable = true;
-      enableNushellIntegration = true;
-    };
-
     bash = {
       enable = true;
       bashrcExtra = ''

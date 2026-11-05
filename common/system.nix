@@ -9,12 +9,6 @@
   # /.local/bin 加入 path 环境变量
   environment.localBinInPath = true;
 
-  # 蓝牙支持
-  hardware.bluetooth = {
-    enable = true;
-    powerOnBoot = false;
-  };
-
   security.sudo-rs.enable = true;
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";

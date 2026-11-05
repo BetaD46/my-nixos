@@ -18,6 +18,12 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.systemd-boot.configurationLimit = 5;
 
+  # 蓝牙支持
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = false;
+  };
+
   imports = [
     ../../common/system.nix
     ../../common/packages.nix

@@ -42,12 +42,6 @@
   # Optionally enable xserver
   # services.xserver.enable = true;
 
-  home-manager.users.wjf = {
-    imports = [
-      ./home.nix
-    ];
-  };
-
   imports = [
     inputs.home-manager.nixosModules.default
   ];

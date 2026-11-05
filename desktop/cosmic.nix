@@ -11,18 +11,6 @@
   # 启用 gnome-keyring
   services.gnome.gnome-keyring.enable = true;
 
-  # home-manager 设置
-  home-manager = {
-    useGlobalPkgs = true;
-    useUserPackages = true;
-    users.wjf = {
-      imports = [
-        ../common/home.nix
-        ./home.nix
-      ];
-    };
-  };
-
   imports = [
     inputs.home-manager.nixosModules.default
   ];

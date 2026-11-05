@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
@@ -74,4 +74,6 @@
       };
     };
   };
+
+  home-manager.users.wjf.imports = [ ./home.nix ];
 }

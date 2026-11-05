@@ -78,15 +78,10 @@
     ];
   };
 
-  home-manager.users.wjf = {
-    imports = [
-      ./home.nix
-    ];
-  };
-
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
+    users.wjf.imports = [ ./home.nix ];
   };
 
   system.stateVersion = "26.05";

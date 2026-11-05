@@ -84,18 +84,10 @@
   # };
 
   # home-manager 设置
-  home-manager = {
-    useGlobalPkgs = true;
-    useUserPackages = true;
-    users.wjf = {
-      imports = [
-        ../common/home.nix
-        ./niri/home.nix
-        ./home.nix
-        inputs.noctalia.homeModules.default
-      ];
-    };
-  };
+  home-manager.users.wjf.imports = [
+    ./niri/home.nix
+    inputs.noctalia.homeModules.default
+  ];
 
   imports = [
     inputs.home-manager.nixosModules.default

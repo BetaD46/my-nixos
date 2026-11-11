@@ -14,6 +14,7 @@
     seahorse # 密钥管理 UI
     wl-clipboard # wayland 剪切板控制
     doublecmd # 文件管理器
+    nwg-look # gtk 设置
   ];
 
   # programs.xwayland.enable = true;

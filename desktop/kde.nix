@@ -8,7 +8,20 @@
     konsole
     elisa
     kate
-    sddm
+    # sddm
+  ];
+
+  qt = {
+    enable = true;
+    platformTheme = "qt5ct";
+  };
+
+  environment.variables = {
+    QT_QPA_PLATFORM = "wayland";
+  };
+
+  environment.systemPackages = with pkgs; [
+    libxcb-cursor
   ];
 
   # # PLM
@@ -32,15 +45,15 @@
   # };
 
   # Default display manager for Plasma
-  # services.displayManager.sddm = {
-  #   enable = true;
+  services.displayManager.sddm = {
+    enable = true;
 
-  #   # To use Wayland (Experimental for SDDM)
-  #   wayland.enable = true;
-  # };
+    # To use Wayland (Experimental for SDDM)
+    wayland.enable = true;
+  };
 
   # Optionally enable xserver
-  # services.xserver.enable = true;
+  services.xserver.enable = true;
 
   imports = [
     inputs.home-manager.nixosModules.default

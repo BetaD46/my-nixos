@@ -1,9 +1,18 @@
+list:
+    cat justfile
 test:
-    sudo nixos-rebuild test -j 12 --flake=$(pwd)#hhh
+    #!/usr/bin/env bash
+    read -p "Flake: " flake_name
+    sudo nixos-rebuild test --flake=$(pwd)#${flake_name} --impure
 switch:
-    sudo nixos-rebuild switch -j 12 --flake=$(pwd)#hhh
+    #!/usr/bin/env bash
+    read -p "Flake: " flake_name
+    sudo nixos-rebuild switch --flake=$(pwd)#${flake_name} --impure
+boot:
+    #!/usr/bin/env bash
+    read -p "Flake: " flake_name
+    sudo nixos-rebuild boot --flake=$(pwd)#${flake_name} --impure
 clean:
     sudo nix-collect-garbage -d
 update:
     nix flake update
-update-switch: update switch

@@ -1,18 +1,6 @@
 { pkgs, ... }:
 
-let
-  raw = builtins.getEnv "NIXOS_DESKTOP";
-  desktop = if raw == "" then "niri" else raw;
-
-  desktopFile = ./. + "/${desktop}.nix";
-in
 {
-  imports =
-    if builtins.pathExists desktopFile then
-      [ desktopFile ]
-    else
-      throw "未知桌面环境: ${desktop}（找不到 ${toString desktopFile}）";
-
   environment.systemPackages = with pkgs; [
     # libreoffice-qt
     nil

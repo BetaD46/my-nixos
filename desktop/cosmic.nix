@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   services.desktopManager.cosmic.enable = true;
@@ -10,8 +10,4 @@
 
   # 启用 gnome-keyring
   services.gnome.gnome-keyring.enable = true;
-
-  imports = [
-    inputs.home-manager.nixosModules.default
-  ];
 }

@@ -30,6 +30,7 @@
     ../../common/packages.nix
     ../../desktop/base.nix
     ../../desktop/niri.nix
+    # ../../desktop/cosmic.nix
     # Adds the NUR overlay
     inputs.nur.modules.nixos.default
     # NUR modules can be imported directly:

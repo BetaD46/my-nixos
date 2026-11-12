@@ -42,11 +42,18 @@
 
     obsidian.enable = true;
 
-    ghostty.enable = true;
+    ghostty = {
+      enable = true;
+      enableFishIntegration = true;
+      settings = {
+        command = "fish";
+      };
+    };
 
     starship = {
       enable = true;
       enableNushellIntegration = true;
+      enableFishIntegration = true;
     };
   };
 }

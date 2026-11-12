@@ -9,11 +9,11 @@
     # noctalia-shell
     # nemo
     # kdePackages.dolphin
+    # doublecmd # 文件管理器
     xwayland-satellite # 解决 x11 应用兼容问题
     papirus-icon-theme
     seahorse # 密钥管理 UI
     wl-clipboard # wayland 剪切板控制
-    doublecmd # 文件管理器
     nwg-look # gtk 设置
   ];
 
@@ -37,6 +37,11 @@
     cursorTheme = {
       package = pkgs.bibata-cursors;
       name = "Bibata-Modern-Ice";
+    };
+    settings = {
+      keyboard = {
+        numlock = true;
+      };
     };
   };
 

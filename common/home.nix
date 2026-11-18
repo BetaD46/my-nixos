@@ -59,7 +59,7 @@
   };
   xdg.configFile."./starship.toml".source = ../configs/starship.toml;
 
-  xdg.configFile."./fish/config.fish" = {
+  xdg.configFile."./fish/conf.d/nix.fish" = {
     source = ../configs/fish/config.fish;
   };
 

@@ -1,4 +1,4 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
-    zoxide init fish | source
+    alias ls='eza --git --hyperlink --header --icons -M --group-directories-first'
 end

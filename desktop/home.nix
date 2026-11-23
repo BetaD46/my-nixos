@@ -40,6 +40,8 @@
 
     zed-editor.enable = true;
 
+    vscode.enable = true;
+
     obsidian.enable = true;
 
     ghostty = {

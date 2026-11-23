@@ -18,6 +18,9 @@
   # boot.loader.systemd-boot.enable = true;
   # boot.loader.systemd-boot.configurationLimit = 5;
 
+  zramSwap.enable = true; # 启用 zram，用于在 RAM 中创建压缩块设备的内核模块，替代或补充虚拟内存
+  systemd.oomd.enable =true; # 启用用户态 oomd，防止内核原生的 OOM 终止程序无法触发
+
   # 蓝牙支持
   hardware.bluetooth = {
     enable = true;

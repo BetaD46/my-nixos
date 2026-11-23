@@ -15,7 +15,6 @@
     wireshark
     # postman
     wpsoffice-cn
-    vscode
   ];
 
   programs.wireshark = {
